@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مصور فوتوغرافي محترف في العراق - تصوير حفلات، أعراس، وجلسات شخصية">
+    <meta name="keywords" content="مصور, تصوير فوتوغرافي, حفلات, أعراس, العراق">
+    <meta name="author" content="Your Name">
+    <title>مصور فوتوغرافي محترف | التقاط اللحظات الثمينة</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-camera-retro"></i>
+                <span>أحمد محمد</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">الرئيسية</a></li>
+                <li><a href="#portfolio" class="nav-link">معرض الأعمال</a></li>
+                <li><a href="#about" class="nav-link">من أنا</a></li>
+                <li><a href="#services" class="nav-link">الخدمات</a></li>
+                <li><a href="#testimonials" class="nav-link">آراء العملاء</a></li>
+                <li><a href="#contact" class="nav-link">تواصل معي</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <p class="hero-label">مصور احترافي</p>
+            <h1 class="hero-title">التقاط لحظاتك الثمينة</h1>
+            <p class="hero-subtitle">نحول لحظاتك الخاصة إلى ذكريات خالدة بلمسة فنية احترافية</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">
+                    <span>شاهد أعمالي</span>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>احجز جلسة</span>
+                    <i class="fas fa-calendar"></i>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">أعمالي</p>
+                <h2 class="section-title">معرض الأعمال</h2>
+                <p class="section-subtitle">اكتشف أفضل أعمالي الفوتوغرافية</p>
+            </div>
+            
+            <div class="portfolio-filters reveal">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    <span>الكل</span>
+                </button>
+                <button class="filter-btn" data-filter="weddings">
+                    <i class="fas fa-rings-wedding"></i>
+                    <span>أعراس</span>
+                </button>
+                <button class="filter-btn" data-filter="graduation">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>حفلات تخرج</span>
+                </button>
+                <button class="filter-btn" data-filter="events">
+                    <i class="fas fa-calendar-star"></i>
+                    <span>حفلات</span>
+                </button>
+                <button class="filter-btn" data-filter="portraits">
+                    <i class="fas fa-user"></i>
+                    <span>صور شخصية</span>
+                </button>
+            </div>
+
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Images will be loaded from gallery-data.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev" id="lightboxPrev">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="lightbox-next" id="lightboxNext">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <img src="/placeholder.svg" alt="" class="lightbox-image" id="lightboxImage">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image reveal">
+                    <img src="./public/photo_2025-12-22_16-00-08.jpg" alt="صورة المصور">
+                    <div class="about-image-overlay">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <div class="about-text reveal">
+                    <p class="section-label">نبذة عني</p>
+                    <h2 class="section-title">أحمد محمد</h2>
+                    <p class="about-role">مصور فوتوغرافي محترف</p>
+                    <p class="about-description">
+                        مرحباً! أنا مصور فوتوغرافي محترف مقره في العراق، متخصص في تصوير الحفلات والأعراس واللحظات الخاصة. 
+                        أؤمن بأن كل لحظة تستحق أن تُحفظ بطريقة فنية مميزة تعكس جمالها وعاطفتها.
+                    </p>
+                    <p class="about-description">
+                        بخبرة تمتد لأكثر من 8 سنوات في مجال التصوير الفوتوغرافي، قمت بتغطية مئات الحفلات والمناسبات الخاصة،
+                        وساعدت العديد من العائلات على الاحتفاظ بذكرياتهم الثمينة بأسلوب احترافي وعصري.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">سنوات خبرة</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">حفل وعرس</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">عميل سعيد</div>
+                        </div>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>تصوير احترافي بأحدث المعدات</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>معالجة وتحرير الصور بدقة عالية</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>تسليم سريع للصور النهائية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">خدماتي</p>
+                <h2 class="section-title">ماذا أقدم لك</h2>
+                <p class="section-subtitle">باقات متنوعة تناسب احتياجاتك</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-rings-wedding"></i>
+                    </div>
+                    <h3 class="service-title">تصوير أعراس</h3>
+                    <p class="service-description">
+                        تغطية كاملة ليومك الخاص من البداية للنهاية، مع التركيز على التفاصيل واللحظات العاطفية
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> تصوير فوتوغرافي وفيديو</li>
+                        <li><i class="fas fa-check"></i> معالجة احترافية للصور</li>
+                        <li><i class="fas fa-check"></i> ألبوم رقمي فاخر</li>
+                    </ul>
+                    <div class="service-price">ابتداءً من 500,000 د.ع</div>
+                    <a href="#contact" class="btn btn-service">احجز الآن</a>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="service-title">حفلات التخرج</h3>
+                    <p class="service-description">
+                        احتفل بإنجازك الأكاديمي بصور تذكارية رائعة تخلد هذا اليوم المميز
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> جلسات تصوير فردية وجماعية</li>
+                        <li><i class="fas fa-check"></i> خلفيات وإضاءة احترافية</li>
+                        <li><i class="fas fa-check"></i> طباعة الصور بجودة عالية</li>
+                    </ul>
+                    <div class="service-price">ابتداءً من 150,000 د.ع</div>
+                    <a href="#contact" class="btn btn-service">احجز الآن</a>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-star"></i>
+                    </div>
+                    <h3 class="service-title">تصوير حفلات</h3>
+                    <p class="service-description">
+                        تغطية شاملة لجميع أنواع الحفلات والمناسبات الخاصة بأسلوب مبدع
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> حفلات أعياد الميلاد</li>
+                        <li><i class="fas fa-check"></i> المناسبات العائلية</li>
+                        <li><i class="fas fa-check"></i> الفعاليات الخاصة</li>
+                    </ul>
+                    <div class="service-price">ابتداءً من 200,000 د.ع</div>
+                    <a href="#contact" class="btn btn-service">احجز الآن</a>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="service-title">جلسات شخصية</h3>
+                    <p class="service-description">
+                        صور بورتريه احترافية تبرز شخصيتك الفريدة بأسلوب فني راقي
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> جلسات استوديو أو خارجية</li>
+                        <li><i class="fas fa-check"></i> توجيه احترافي للبوز</li>
+                        <li><i class="fas fa-check"></i> ريتوش متقدم للصور</li>
+                    </ul>
+                    <div class="service-price">ابتداءً من 100,000 د.ع</div>
+                    <a href="#contact" class="btn btn-service">احجز الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">التقييمات</p>
+                <h2 class="section-title">آراء العملاء</h2>
+                <p class="section-subtitle">ماذا يقول عملائي عن خدماتي</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        مصور محترف جداً واهتمامه بالتفاصيل رائع. صور عرسنا كانت أجمل من توقعاتنا، 
+                        وكل الضيوف أشادوا بجمال الصور. شكراً جزيلاً!
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="/placeholder.svg?height=60&width=60" alt="سارة وعلي">
+                        <div class="author-info">
+                            <h4>سارة وعلي</h4>
+                            <p>عروسان - بغداد</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        صور حفل تخرجي كانت مذهلة! التعامل كان راقي جداً والأسعار معقولة. 
+                        بالتأكيد سأتعامل معه في المناسبات القادمة.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="/placeholder.svg?height=60&width=60" alt="محمد أحمد">
+                        <div class="author-info">
+                            <h4>محمد أحمد</h4>
+                            <p>خريج هندسة - الموصل</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        خبرة ممتازة من البداية للنهاية. صور حفل عيد ميلاد ابنتي كانت رائعة 
+                        والتسليم كان سريع جداً. أنصح به بشدة!
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="/placeholder.svg?height=60&width=60" alt="ليلى حسن">
+                        <div class="author-info">
+                            <h4>ليلى حسن</h4>
+                            <p>أم لطفلين - أربيل</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        مبدع حقيقي! الصور الشخصية التي التقطها لي كانت غاية في الاحترافية. 
+                        يعرف كيف يلتقط أفضل زوايا ويخرج جمال الصورة.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="/placeholder.svg?height=60&width=60" alt="عمر خالد">
+                        <div class="author-info">
+                            <h4>عمر خالد</h4>
+                            <p>رائد أعمال - البصرة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">تواصل</p>
+                <h2 class="section-title">احجز جلستك الآن</h2>
+                <p class="section-subtitle">دعنا نلتقط لحظاتك الثمينة معاً</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info reveal">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>الهاتف</h4>
+                            <p dir="ltr">+964 770 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>البريد الإلكتروني</h4>
+                            <p>info@photographer.iq</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>الموقع</h4>
+                            <p>بغداد، العراق</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>ساعات العمل</h4>
+                            <p>السبت - الخميس: 9 صباحاً - 8 مساءً</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/9647701234567" target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>تواصل عبر واتساب</span>
+                    </a>
+                </div>
+                <form class="contact-form reveal" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fas fa-user"></i>
+                                الاسم الكامل
+                            </label>
+                            <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i>
+                                البريد الإلكتروني
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class="fas fa-phone"></i>
+                                رقم الهاتف
+                            </label>
+                            <input type="tel" id="phone" name="phone" placeholder="07XX XXX XXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">
+                                <i class="fas fa-list"></i>
+                                نوع الخدمة
+                            </label>
+                            <select id="service" name="service" required>
+                                <option value="">اختر نوع الخدمة</option>
+                                <option value="wedding">تصوير عرس</option>
+                                <option value="graduation">حفل تخرج</option>
+                                <option value="event">حفلة</option>
+                                <option value="portrait">جلسة شخصية</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">
+                            <i class="fas fa-calendar"></i>
+                            التاريخ المفضل
+                        </label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">
+                            <i class="fas fa-comment"></i>
+                            رسالتك
+                        </label>
+                        <textarea id="message" name="message" rows="5" placeholder="اكتب تفاصيل طلبك هنا..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span class="btn-text">إرسال الطلب</span>
+                        <span class="btn-loading">
+                            <i class="fas fa-circle-notch fa-spin"></i>
+                        </span>
+                    </button>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-camera-retro"></i>
+                        <span>أحمد محمد</span>
+                    </div>
+                    <p class="footer-description">
+                        مصور فوتوغرافي محترف متخصص في تصوير الحفلات والأعراس واللحظات الخاصة
+                    </p>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#portfolio">معرض الأعمال</a></li>
+                        <li><a href="#about">من أنا</a></li>
+                        <li><a href="#services">الخدمات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>الخدمات</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">تصوير أعراس</a></li>
+                        <li><a href="#services">حفلات تخرج</a></li>
+                        <li><a href="#services">تصوير حفلات</a></li>
+                        <li><a href="#services">جلسات شخصية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span dir="ltr">+964 770 123 4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@photographer.iq</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>بغداد، العراق</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 جميع الحقوق محفوظة - أحمد محمد للتصوير الفوتوغرافي</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/9647701234567" class="whatsapp-float" target="_blank" title="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="gallery-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
